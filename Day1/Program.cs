@@ -6,8 +6,8 @@ namespace Pink
     {
         static void Main(string[] args)
         {
-            Example2();
-              }
+            Task5();
+        }
 
         static void Example1()
         {
@@ -56,6 +56,13 @@ namespace Pink
         /* How many variables exist after execution of each line? Note their values at each line */
         static void Task3()
         {
+            int number = 5; // number = 5
+            number = 10; //number = 10
+            double progress = 0.1; // number = 10, progress = 0.1
+            progress = 0.5; // number = 10, progress = 0.5
+            number = -8; // number = -8, progress = 0.5
+            int otherNumber = 6; //  number = -8, progress = 0.5, otherNumber = 6
+            number = otherNumber; //  number = 6, progress = 0.5, otherNumber = 6
         }
 
         /* Swap two variables using an extra variable */
@@ -66,6 +73,9 @@ namespace Pink
             Console.WriteLine(a + " " + b);
 
             // Swap variables
+            int c = a; //a = 1, b = 2, c = 1
+            a = b; //a = 2, b = 2, c = 1
+            b = c; //a = 2, b = 1, c = 1
 
             Console.WriteLine(a + " " + b);
         }
@@ -88,6 +98,14 @@ namespace Pink
         /* Read two numbers and print their sum */
         static void Task5()
         {
+            Console.WriteLine("Hey stranger, pick a number");
+            string numberStr1 = Console.ReadLine();
+            int number1 = int.Parse(numberStr1);
+            Console.WriteLine("cool cool, now pick a second number");
+            string numberStr2 = Console.ReadLine();
+            int number2 = int.Parse(numberStr2);
+            int numberPlus = number1 + number2;
+            Console.WriteLine($"Add them together and what do you get? {numberPlus}!");
         }
 
         /* Operators
