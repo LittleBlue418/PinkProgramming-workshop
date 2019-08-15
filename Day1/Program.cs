@@ -6,7 +6,7 @@ namespace Pink
     {
         static void Main(string[] args)
         {
-            Task6();
+            Task7();
         }
 
         static void Example1()
@@ -150,6 +150,13 @@ namespace Pink
         /* Ask the user 3 yes/no questions. Check if all the answers are correct and print "Success" or "Failure" */
         static void Task8()
         {
+            Console.WriteLine("Lets play a game, answer yes or no. First question: Is the world flat?");
+            bool answer1IsCorrect = Console.ReadLine() =="No";
+            Console.WriteLine("Do vaccines cause autism?");
+            bool answer2IsCorrect = Console.ReadLine() == "No";
+            Console.WriteLine("Are men and women equally capable?");
+            bool answer3IsCorrect = Console.ReadLine() == "Yes";
+            Console.WriteLine((answer1IsCorrect && answer2IsCorrect && answer3IsCorrect) ? "Success" : "Failure");
         }
 
         /* If-statements */
