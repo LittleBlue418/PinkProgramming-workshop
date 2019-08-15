@@ -6,30 +6,31 @@ namespace Pink
     {
         static void Main(string[] args)
         {
-            Example1();
-        }
+            Example2();
+              }
 
         static void Example1()
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello Sassy Queens!");
         }
 
         /* Change World to your name and run the program */
         static void Task1()
         {
+            Console.WriteLine("If you can read this i'm trapped in a computer... HELP! HELP!!!!");
         }
 
         /* Data types */
         static void Example2()
         {
-            string name = "Tonya";
-            int age = 30;
-            double height = 1.73;
+            string name = "Cthuhlu, the great destroyer of worlds, master of all things";
+            int age = 300000000;
+            double height = 36.6;
             bool isAwesome = true;
-            Console.WriteLine("Hello, my name is " + name);
-            Console.WriteLine("I am " + age + " years old");
-            Console.WriteLine("My height is " + height + "m");
-            Console.WriteLine("Am I awesome? " + isAwesome);
+            Console.WriteLine("Cower before me puny mortals, for I am " + name);
+            Console.WriteLine("I was born before time, over " + age + " million years ago");
+            Console.WriteLine("My height is " + height + " miles high");
+            Console.WriteLine("You will be crushed, as the fates spoke so it is " + isAwesome);
         }
 
         /* Create 4 variables of different types and print them in a text */
