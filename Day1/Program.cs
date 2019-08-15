@@ -6,7 +6,7 @@ namespace Pink
     {
         static void Main(string[] args)
         {
-            Task5();
+            Task6();
         }
 
         static void Example1()
@@ -131,7 +131,15 @@ namespace Pink
          * It should ask the user for number of hours, minutes and seconds and the print the total number of seconds */
         static void Task6()
         {
-            Console.WriteLine("I'm bored. Let's count the seconds since we started learning C#.");
+            Console.WriteLine("I'm bored. Let's count the seconds since we started learning C#. How many hours have we been at this?");
+            int hours = int.Parse(Console.ReadLine());
+            Console.WriteLine("How many minutes?");
+            int minutes = int.Parse(Console.ReadLine());
+            Console.WriteLine("How many seconds?");
+            int seconds = int.Parse(Console.ReadLine());
+            int totalSeconds = (hours * (60 * 60)) + (minutes * 60) + seconds;
+            Console.WriteLine("So that's " + totalSeconds, "!");
+
         }
 
         /* Convert km/h speed to m/s */
