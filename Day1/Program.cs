@@ -6,7 +6,7 @@ namespace Pink
     {
         static void Main(string[] args)
         {
-            Task9();
+            Task12();
         }
 
         static void Example1()
@@ -177,7 +177,7 @@ namespace Pink
                 Console.WriteLine(number + " is equal to 5.");
             }
         }
-    
+
         /* Ask the user for two numbers, a < b. Print which one is larger. Don't forget about the equals case! */
         static void Task9()
         {
@@ -188,7 +188,7 @@ namespace Pink
 
             if (a > b)
             {
-                Console.WriteLine("a is larger than b");
+                Console.WriteLine($"{a} > {b}");
             }
             else if (a < b)
             {
@@ -198,14 +198,14 @@ namespace Pink
             {
                 Console.WriteLine("a is equal to b");
             }
-
+            Console.WriteLine(a > b ? $"{a} > {b}" : (a < b ? $"{a} < {b}" : $"{a} = {b}"));
         }
 
         /* while-loop */
         static void Example10()
         {
             int count = 0;
-            while (count < 10)
+            while (count <= 10)
             {
                 Console.WriteLine(count);
                 count++;
@@ -215,6 +215,12 @@ namespace Pink
         /* Print numbers 10 to 1 using a while-loop */
         static void Task10()
         {
+            int countDown = 10;
+            while (countDown >= 0)
+            {
+                Console.WriteLine(countDown);
+                countDown--;
+            }
         }
 
         /* for-loop */
@@ -229,6 +235,33 @@ namespace Pink
         /* Ask the user how many times she wants to be motivated. Print "You're te best!" the given number of times. */
         static void Task11()
         {
+            Console.WriteLine("How many times would you like to be motivated?");
+            string motivate = (Console.ReadLine());
+            int number = int.Parse(motivate);
+            for (int i = 0; i <= number; i++)
+            {
+                Console.WriteLine("You go girl!");
+            }
+        }
+        static void Task12()
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            for (int i = 4; i >= 1; i--)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+
         }
 
         /* Print the following pattern using loops:
@@ -244,9 +277,8 @@ namespace Pink
         *       
         
         */
-        static void Task12()
-        {
-        }
+
+
 
         /* Random */
         static void Example13()
