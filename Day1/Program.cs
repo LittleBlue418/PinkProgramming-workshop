@@ -6,7 +6,7 @@ namespace Pink
     {
         static void Main(string[] args)
         {
-            Task7();
+            Task9();
         }
 
         static void Example1()
@@ -151,7 +151,7 @@ namespace Pink
         static void Task8()
         {
             Console.WriteLine("Lets play a game, answer yes or no. First question: Is the world flat?");
-            bool answer1IsCorrect = Console.ReadLine() =="No";
+            bool answer1IsCorrect = Console.ReadLine() == "No";
             Console.WriteLine("Do vaccines cause autism?");
             bool answer2IsCorrect = Console.ReadLine() == "No";
             Console.WriteLine("Are men and women equally capable?");
@@ -177,10 +177,28 @@ namespace Pink
                 Console.WriteLine(number + " is equal to 5.");
             }
         }
-
+    
         /* Ask the user for two numbers, a < b. Print which one is larger. Don't forget about the equals case! */
         static void Task9()
         {
+            Console.Write("a = ");
+            int a = int.Parse(Console.ReadLine());
+            Console.Write("b = ");
+            int b = int.Parse(Console.ReadLine());
+
+            if (a > b)
+            {
+                Console.WriteLine("a is larger than b");
+            }
+            else if (a < b)
+            {
+                Console.WriteLine("a is smaller than b");
+            }
+            else
+            {
+                Console.WriteLine("a is equal to b");
+            }
+
         }
 
         /* while-loop */
