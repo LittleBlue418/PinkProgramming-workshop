@@ -6,12 +6,12 @@ namespace Pink
     {
         static void Main(string[] args)
         {
-            Task12();
+            Task13b();
         }
 
         static void Example1()
         {
-            Console.WriteLine("Hello Sassy Queens!");
+            Console.WriteLine("Hello Sassy Queens!!!");
         }
 
         /* Change World to your name and run the program */
@@ -281,6 +281,8 @@ namespace Pink
 
 
         /* Random */
+
+
         static void Example13()
         {
             Random random = new Random();
@@ -293,44 +295,81 @@ namespace Pink
         /* Make the user guess a random number between 1 and 3 until she gets it right. */
         static void Task13()
         {
+            Random randomNumber = new Random();
+            int value = randomNumber.Next(3) + 1;
+            Console.WriteLine("Take a guess: 1, 2 or 3?");
+            int guess = int.Parse(Console.ReadLine());
+            while (guess != value)
+            {
+                Console.WriteLine("That's not it, try again");
+            }
+
+
         }
 
-        /* Use Math */
-        static void Example14()
+        static void Task13b()
         {
-            Console.WriteLine($"Pi = {Math.PI}");
-            Console.WriteLine($"Pi = {Math.Round(Math.PI)}");
-            Console.WriteLine($"Pi = {Math.Round(Math.PI, 2)}");
-            Console.WriteLine();
+            Random random = new Random();
+            int value = random.Next(0, 4);
+
+            bool svar = true;
+
+            do
+            {
+                Console.WriteLine("Take a guess on a number between 1-3?");
+                int guess = int.Parse(Console.ReadLine());
+
+                if (guess == value)
+                {
+                    Console.WriteLine("Congrats! U won!");
+                    svar = false;
+                }
+                else
+                {
+                    Console.WriteLine("U picked the wrong number, try again");
+                }
+            } while (svar == true);
+
         }
 
-        /* Write a program that calculates the area of a circle, given a radius that the user supplies.
-         * Round the answerr to two decimals. */
-        static void Task14()
-        {
-        }
 
-        /* Write a program that calculates the diagonal of a TV given its width and height. */
-        static void Task15()
-        {
-        }
 
-        /* Use DateTime */
-        static void Example16()
-        {
-            DateTime now = DateTime.Now;
-            Console.WriteLine(now);
-            DateTime today = DateTime.Today;
-            Console.WriteLine(today);
-            DateTime tomorrow = today.AddDays(1);
-            Console.WriteLine(tomorrow);
-            var timeTillTomorrow = tomorrow.Subtract(now);
-            Console.WriteLine((int)timeTillTomorrow.TotalMinutes + " minutes till tomorrow");
-        }
+    /* Use Math */
+    static void Example14()
+{
+    Console.WriteLine($"Pi = {Math.PI}");
+    Console.WriteLine($"Pi = {Math.Round(Math.PI)}");
+    Console.WriteLine($"Pi = {Math.Round(Math.PI, 2)}");
+    Console.WriteLine();
+}
 
-        /* Write a program that calculates the number of days till your next birthday. */
-        static void Task16()
-        {
-        }
-    }
+/* Write a program that calculates the area of a circle, given a radius that the user supplies.
+ * Round the answerr to two decimals. */
+static void Task14()
+{
+}
+
+/* Write a program that calculates the diagonal of a TV given its width and height. */
+static void Task15()
+{
+}
+
+/* Use DateTime */
+static void Example16()
+{
+    DateTime now = DateTime.Now;
+    Console.WriteLine(now);
+    DateTime today = DateTime.Today;
+    Console.WriteLine(today);
+    DateTime tomorrow = today.AddDays(1);
+    Console.WriteLine(tomorrow);
+    var timeTillTomorrow = tomorrow.Subtract(now);
+    Console.WriteLine((int)timeTillTomorrow.TotalMinutes + " minutes till tomorrow");
+}
+
+/* Write a program that calculates the number of days till your next birthday. */
+static void Task16()
+{
+}
+}
 }
