@@ -16,14 +16,16 @@ namespace Day2
             Console.WriteLine(sum);
 
             Console.WriteLine(Ratio(a, b));
+            Console.WriteLine(Ratio(5, 9));
+            Console.WriteLine(PrintCongrats("Dave"));
         }
    
 
         /* Functions */
 
-        static int Ratio(int z, int x)
+        static double Ratio(double a, double b)
         {
-            return x / z;
+            return b / a;
         }
         static int DoubleUp(int number)
         {
@@ -43,6 +45,13 @@ namespace Day2
         /* Write a function that calculates the diagonal of a rectangle with sides a and b. */
 
         /* Write a function that prints a congratulation to the name supplied as parameter. */
+
+        static string PrintCongrats(string name)
+        {
+            string a = $"Congratulations {name}!";
+            Console.WriteLine("Test");
+            return a;
+        }
         
         /* Arrays */
         static void Example1()
