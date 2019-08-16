@@ -12,10 +12,15 @@ namespace LittleBlue418Project
             myOctopus1.PrintDescription();
 
             Octopus myOctopus2 = new Octopus(10, "yello");
+            myOctopus2.rest();
             myOctopus2.PrintDescription();
 
             Octopus myOctopus3 = new Octopus(2, "black");
             myOctopus3.PrintDescription();
+
+            // class | calling the static function within the Octopus class
+            Octopus.DoSomething();
+
 
 
         }
