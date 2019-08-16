@@ -7,10 +7,24 @@ namespace Day2
     {
         static void Main(string[] args)
         {
-            Task8();
+            int a = 5;
+            int b = DoubleUp(a);
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+
+            int sum = Sum(a, b);
+            Console.WriteLine(sum);
+
+            Console.WriteLine(Ratio(a, b));
         }
+   
 
         /* Functions */
+
+        static int Ratio(int z, int x)
+        {
+            return x / z;
+        }
         static int DoubleUp(int number)
         {
             return number * 2;

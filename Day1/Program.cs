@@ -6,7 +6,7 @@ namespace Pink
     {
         static void Main(string[] args)
         {
-            Task13();
+            Task16();
         }
 
         static void Example1()
@@ -375,6 +375,29 @@ namespace Pink
         /* Write a program that calculates the number of days till your next birthday. */
         static void Task16()
         {
+            DateTime now = DateTime.Now;
+            DateTime myDateOfBirth = new DateTime(1988, 1, 2);
+            int month = myDateOfBirth.Month;
+            int day = myDateOfBirth.Day;
+            int minute = myDateOfBirth.Minute;
+            
+
+
+            bool beforeBirthday = true;
+
+            if (month <= now.Month) //Is the month of my birth less than this month or equal to now?
+            {
+                if (day <= now.Day) //Is the day of my birth less than this day or equal to now?
+                {
+                    if (minute < now.Minute) //Is the miute of my birth less than this minute?
+                    {
+                        var TimeTillBirthdayFuture = 
+                        Console.WriteLine((int).TotalMinutes + " minutes till tomorrow");
+                    }
+                }
+            }
+            var timeTillBirthday = birthday.Subtract(now);
+            Console.WriteLine((int)timeTillBirthday.TotalMinutes + " minutes till my birthday");
         }
     }
 }
