@@ -18,6 +18,11 @@ namespace Day2
             Console.WriteLine(Ratio(a, b));
             Console.WriteLine(Ratio(5, 9));
             Console.WriteLine(PrintCongrats("Dave"));
+
+            double c = 6;
+            double d = 8;
+            double e = Pythag(c, d);
+            Console.WriteLine($"The square route of e is {e}");
         }
    
 
@@ -44,11 +49,17 @@ namespace Day2
 
         /* Write a function that calculates the diagonal of a rectangle with sides a and b. */
 
+            static double Pythag (double a, double b)
+        {
+            double c = (a * a) + (b * b);
+            return Math.Sqrt(c);
+        }
+
         /* Write a function that prints a congratulation to the name supplied as parameter. */
 
         static string PrintCongrats(string name)
         {
-            string a = $"Congratulations {name}!";
+            string a = $"Hello {name}. we've been watching you.";
             Console.WriteLine("Test");
             return a;
         }
