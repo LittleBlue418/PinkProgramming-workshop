@@ -6,7 +6,7 @@ namespace Pink
     {
         static void Main(string[] args)
         {
-            Task13b();
+            Task13();
         }
 
         static void Example1()
@@ -295,16 +295,21 @@ namespace Pink
         /* Make the user guess a random number between 1 and 3 until she gets it right. */
         static void Task13()
         {
-            Random randomNumber = new Random();
-            int value = randomNumber.Next(3) + 1;
-            Console.WriteLine("Take a guess: 1, 2 or 3?");
-            int guess = int.Parse(Console.ReadLine());
-            while (guess != value)
+            bool continueGuessing = true;
+            while (continueGuessing)
             {
-                Console.WriteLine("That's not it, try again");
+                Random randomNumber = new Random();
+                int value = randomNumber.Next(3) + 1;
+                Console.WriteLine("Take a guess: 1, 2 or 3?");
+                int guess = int.Parse(Console.ReadLine());
+                Console.WriteLine(guess == value ? "You're lucky!" : "Better luck next time!");
+                if (guess == value)
+                {
+                    continueGuessing = false;
+                }
+
+
             }
-
-
         }
 
         static void Task13b()
@@ -312,7 +317,7 @@ namespace Pink
             Random random = new Random();
             int value = random.Next(0, 4);
 
-            bool svar = true;
+            bool continueGuessing = true;
 
             do
             {
@@ -322,54 +327,54 @@ namespace Pink
                 if (guess == value)
                 {
                     Console.WriteLine("Congrats! U won!");
-                    svar = false;
+                    continueGuessing = false;
                 }
                 else
                 {
                     Console.WriteLine("U picked the wrong number, try again");
                 }
-            } while (svar == true);
+            } while (continueGuessing == true);
 
         }
 
 
 
-    /* Use Math */
-    static void Example14()
-{
-    Console.WriteLine($"Pi = {Math.PI}");
-    Console.WriteLine($"Pi = {Math.Round(Math.PI)}");
-    Console.WriteLine($"Pi = {Math.Round(Math.PI, 2)}");
-    Console.WriteLine();
-}
+        /* Use Math */
+        static void Example14()
+        {
+            Console.WriteLine($"Pi = {Math.PI}");
+            Console.WriteLine($"Pi = {Math.Round(Math.PI)}");
+            Console.WriteLine($"Pi = {Math.Round(Math.PI, 2)}");
+            Console.WriteLine();
+        }
 
-/* Write a program that calculates the area of a circle, given a radius that the user supplies.
- * Round the answerr to two decimals. */
-static void Task14()
-{
-}
+        /* Write a program that calculates the area of a circle, given a radius that the user supplies.
+         * Round the answerr to two decimals. */
+        static void Task14()
+        {
+        }
 
-/* Write a program that calculates the diagonal of a TV given its width and height. */
-static void Task15()
-{
-}
+        /* Write a program that calculates the diagonal of a TV given its width and height. */
+        static void Task15()
+        {
+        }
 
-/* Use DateTime */
-static void Example16()
-{
-    DateTime now = DateTime.Now;
-    Console.WriteLine(now);
-    DateTime today = DateTime.Today;
-    Console.WriteLine(today);
-    DateTime tomorrow = today.AddDays(1);
-    Console.WriteLine(tomorrow);
-    var timeTillTomorrow = tomorrow.Subtract(now);
-    Console.WriteLine((int)timeTillTomorrow.TotalMinutes + " minutes till tomorrow");
-}
+        /* Use DateTime */
+        static void Example16()
+        {
+            DateTime now = DateTime.Now;
+            Console.WriteLine(now);
+            DateTime today = DateTime.Today;
+            Console.WriteLine(today);
+            DateTime tomorrow = today.AddDays(1);
+            Console.WriteLine(tomorrow);
+            var timeTillTomorrow = tomorrow.Subtract(now);
+            Console.WriteLine((int)timeTillTomorrow.TotalMinutes + " minutes till tomorrow");
+        }
 
-/* Write a program that calculates the number of days till your next birthday. */
-static void Task16()
-{
-}
-}
+        /* Write a program that calculates the number of days till your next birthday. */
+        static void Task16()
+        {
+        }
+    }
 }
