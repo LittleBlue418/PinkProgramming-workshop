@@ -27,8 +27,8 @@ namespace Octopus_Game
             InitializeComponent();
             drawLines();
 
-            myOctopus = new Octopus(0, 0);
-            //drawOctopus();
+            myOctopus = new Octopus(0, 0, 8);
+            drawOctopus();
           
          }
 

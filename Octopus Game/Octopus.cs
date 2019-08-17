@@ -7,32 +7,46 @@ using System.Threading.Tasks;
 namespace Octopus_Game
 {
         public class Octopus
-    {
+        {
         public int X { get; private set; }
         public int Y { get; private set; }
+        private int gridSize;
 
-        public Octopus(int x, int y) 
+        public Octopus(int x, int y, int gridSize) 
         { 
             this.X = x;
             this.Y = y;
+            this.gridSize = gridSize;
         }
 
         public void moveUp()
         {
-            Y--;
+            if (Y >= 1)
+            {
+                Y--;
+            }
         }
 
         public void moveDown()
         {
-            Y++;
+            if (Y < (gridSize -1))
+            {
+                Y++;
+            }
         }
         public void moveLeft()
         {
-            X--;
+            if (X >= 1)
+            {
+                X--;
+            }
         }
         public void moveRight()
         {
-            X++;
+            if (X < (gridSize - 1))
+            {
+                X++;
+            }
         }
 
     }
