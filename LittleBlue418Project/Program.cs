@@ -21,6 +21,10 @@ namespace LittleBlue418Project
             // class | calling the static function within the Octopus class
             Octopus.DoSomething();
 
+            // because of get and set we can now directly override and set the attribute 'size' for this instance
+            myOctopus1.size = 15;
+            Console.WriteLine(myOctopus1.size);
+
 
 
         }

@@ -8,9 +8,9 @@ namespace LittleBlue418Project
     public class Octopus
     {
         // Attributes
-        int size;
-        string color;
-        bool swimming = true;
+        public int size { get; set; }
+        public string color;
+        public bool swimming = true;
 
         // Constructor
         public Octopus(int size, string color)
@@ -19,7 +19,7 @@ namespace LittleBlue418Project
             this.color = color;
         }
 
-        //Function
+        //Methods
         public void PrintDescription()
         {
             string swimmingStatus = swimming ? "swimming" : "chilling out with a beer..";
@@ -31,6 +31,7 @@ namespace LittleBlue418Project
             swimming = false;
         }
 
+        //Static Method
         public static void DoSomething()
         {
             Console.WriteLine("We all love to swim though, and drink beer. It's a god life being an octopus");
