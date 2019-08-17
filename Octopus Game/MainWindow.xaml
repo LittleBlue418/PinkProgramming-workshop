@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Octopus_Game"
         mc:Ignorable="d"
-        Title="Octopus Game" Height="500" Width="500" ResizeMode="NoResize">
+        Title="Octopus Game" Height="500" Width="500" ResizeMode="NoResize" KeyUp="Window_KeyUp">
     <Grid>
         <Grid.Background>
             <ImageBrush/>

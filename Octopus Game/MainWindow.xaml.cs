@@ -43,7 +43,7 @@ namespace Octopus_Game
 
         }
 
-        protected override void OnKeyUp(KeyEventArgs e)
+        /*protected override void OnKeyUp(KeyEventArgs e)
         {
             base.OnKeyUp(e);
             if (e.Key == Key.Up)
@@ -63,8 +63,14 @@ namespace Octopus_Game
                 myOctopus.moveRight();
             }
 
+            if (myOctopus.X == myFood.X && myOctopus.Y == myFood.Y)
+            {
+                myFood.Respawn();
+                drawFood();
+            }
+
             drawOctopus();
-        }
+        }*/
 
         private void drawOctopus()
         {
@@ -121,6 +127,35 @@ namespace Octopus_Game
 
             }
 
+        }
+
+        private void Window_KeyUp(object sender, KeyEventArgs e)
+        {
+            base.OnKeyUp(e);
+            if (e.Key == Key.Up)
+            {
+                myOctopus.moveUp();
+            }
+            else if (e.Key == Key.Down)
+            {
+                myOctopus.moveDown();
+            }
+            else if (e.Key == Key.Left)
+            {
+                myOctopus.moveLeft();
+            }
+            else if (e.Key == Key.Right)
+            {
+                myOctopus.moveRight();
+            }
+
+            if (myOctopus.X == myFood.X && myOctopus.Y == myFood.Y)
+            {
+                myFood.Respawn();
+                drawFood();
+            }
+
+            drawOctopus();
         }
     }
 }
