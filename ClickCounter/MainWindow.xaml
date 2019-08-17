@@ -5,9 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClickCounter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-            
-        
+        Title="Click Counter: Time to waste some time!" Height="450" Width="800">
+    <Grid Cursor="Cross">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="spawnLabel" Background="#FF412868" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2" FontFamily="MingLiU_HKSCS-ExtB" FontSize="25" Foreground="#FFBB9CD9" FontWeight="Bold">
+            <Label.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF050505" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.BorderBrush> Octopuses spawned : 0
+        </Label>
+        <Button Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click" Width="50" Height="50">
+            <Button.Background>
+                <ImageBrush ImageSource="octopus2.jpg"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>
