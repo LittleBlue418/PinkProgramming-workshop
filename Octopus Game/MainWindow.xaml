@@ -5,12 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Octopus_Game"
         mc:Ignorable="d"
-        Title="Octopus Game" Height="500" Width="500" ResizeMode="NoResize" KeyUp="Window_KeyUp">
-    <Grid>
+        Title="Octopus Game" Height="600" Width="500" ResizeMode="NoResize" KeyUp="Window_KeyUp">
+    <Grid Margin="0">
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <Canvas x:Name="canvas"  Width="400" Height="400">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Canvas x:Name="canvas"  Width="400" Height="400" Margin="0, 50, 0, 0">
             <Canvas.Background>
                 <ImageBrush ImageSource="Underwater_Sea_Background.jpg" Stretch="None"/>
             </Canvas.Background>

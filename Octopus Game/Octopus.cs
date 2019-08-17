@@ -6,17 +6,19 @@ using System.Threading.Tasks;
 
 namespace Octopus_Game
 {
-        public class Octopus
-        {
+    public class Octopus
+    {
         public int X { get; private set; }
         public int Y { get; private set; }
         private int gridSize;
+        public int Hunger {get; set; }
 
         public Octopus(int x, int y, int gridSize) 
         { 
             this.X = x;
             this.Y = y;
             this.gridSize = gridSize;
+            Hunger = 100;
         }
 
         public void moveUp()
