@@ -27,7 +27,12 @@ namespace Octopus_Game
             InitializeComponent();
             drawLines();
 
-            myOctopus = new Octopus(0, 0, 8);
+            Random randomGenerator = new Random();
+            int randomX = randomGenerator.Next(8);
+            int randomY = randomGenerator.Next(8);
+            
+
+            myOctopus = new Octopus(randomX, randomY, 8);
             drawOctopus();
           
          }
