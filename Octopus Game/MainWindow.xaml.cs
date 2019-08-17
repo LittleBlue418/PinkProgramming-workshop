@@ -21,6 +21,7 @@ namespace Octopus_Game
     public partial class MainWindow : Window
     {
         Octopus myOctopus;
+        Food myFood;
         
         public MainWindow()
         {
@@ -30,12 +31,17 @@ namespace Octopus_Game
             Random randomGenerator = new Random();
             int randomX = randomGenerator.Next(8);
             int randomY = randomGenerator.Next(8);
-            
-
             myOctopus = new Octopus(randomX, randomY, 8);
+
+            int a = randomGenerator.Next(8);
+            int b = randomGenerator.Next(8);
+            myFood = new Food(a, b, 8);
+
             drawOctopus();
-          
-         }
+            drawFood();
+
+
+        }
 
         protected override void OnKeyUp(KeyEventArgs e)
         {
@@ -64,6 +70,12 @@ namespace Octopus_Game
         {
             Canvas.SetLeft(OctopusIMG, myOctopus.X * 50);
             Canvas.SetTop(OctopusIMG, myOctopus.Y * 50);
+        }
+
+        private void drawFood()
+        {
+            Canvas.SetLeft(goldfishIMG, myFood.X * 50);
+            Canvas.SetTop(goldfishIMG, myFood.Y * 50);
         }
 
         private void drawLines()

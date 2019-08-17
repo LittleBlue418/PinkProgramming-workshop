@@ -14,7 +14,7 @@
             <Canvas.Background>
                 <ImageBrush ImageSource="Underwater_Sea_Background.jpg" Stretch="None"/>
             </Canvas.Background>
-            <Image x:Name="goldfishIMG" Source="goldfish.png" Width="35" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="7" Canvas.Top="7"></Image>
+            <Image x:Name="goldfishIMG" Source="goldfish.png" Width="35" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="0" Canvas.Top="-0.2" Margin="5,5,6,6"></Image>
             <Image x:Name="OctopusIMG" Source="octopus2.png" Width="50" Height="50"></Image>
             
 
