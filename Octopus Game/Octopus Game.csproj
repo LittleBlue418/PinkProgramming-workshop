@@ -97,5 +97,11 @@
   <ItemGroup>
     <Resource Include="octopus2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Underwater_Sea_Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="goldfish.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

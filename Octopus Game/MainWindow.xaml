@@ -7,10 +7,18 @@
         mc:Ignorable="d"
         Title="Octopus Game" Height="500" Width="500" ResizeMode="NoResize">
     <Grid>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
         <Canvas x:Name="canvas"  Width="400" Height="400">
-          
-       
+            <Canvas.Background>
+                <ImageBrush ImageSource="Underwater_Sea_Background.jpg"/>
+            </Canvas.Background>
+            <Image Source="goldfish.png" Width="45" Height="45"></Image>
+            <Image Source="octopus2.png" Width="50" Height="50"></Image>
             
+
+
 
         </Canvas>
     </Grid>
