@@ -12,10 +12,10 @@
         </Grid.Background>
         <Canvas x:Name="canvas"  Width="400" Height="400">
             <Canvas.Background>
-                <ImageBrush ImageSource="Underwater_Sea_Background.jpg"/>
+                <ImageBrush ImageSource="Underwater_Sea_Background.jpg" Stretch="None"/>
             </Canvas.Background>
-            <Image Source="goldfish.png" Width="45" Height="45"></Image>
-            <Image Source="octopus2.png" Width="50" Height="50"></Image>
+            <Image x:Name="goldfishIMG" Source="goldfish.png" Width="35" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="7" Canvas.Top="7"></Image>
+            <Image x:Name="OctopusIMG" Source="octopus2.png" Width="50" Height="50"></Image>
             
 
 

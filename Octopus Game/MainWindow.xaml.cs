@@ -24,6 +24,9 @@ namespace Octopus_Game
         {
             InitializeComponent();
             drawLines();
+
+            Canvas.SetLeft(OctopusIMG, 50);
+            Canvas.SetTop(OctopusIMG, 50);
             
         }
 
