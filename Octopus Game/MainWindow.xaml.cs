@@ -20,17 +20,48 @@ namespace Octopus_Game
     /// </summary>
     public partial class MainWindow : Window
     {
+        Octopus myOctopus;
+        
         public MainWindow()
         {
             InitializeComponent();
             drawLines();
 
-            Canvas.SetLeft(OctopusIMG, 50);
-            Canvas.SetTop(OctopusIMG, 50);
-            
+            myOctopus = new Octopus(0, 0);
+            //drawOctopus();
+          
+         }
+
+        protected override void OnKeyUp(KeyEventArgs e)
+        {
+            base.OnKeyUp(e);
+            if (e.Key == Key.Up)
+            {
+                myOctopus.moveUp();
+            }
+            else if (e.Key == Key.Down)
+            {
+                myOctopus.moveDown();
+            }
+            else if (e.Key == Key.Left)
+            {
+                myOctopus.moveLeft();
+            }
+            else if (e.Key == Key.Right)
+            {
+                myOctopus.moveRight();
+            }
+
+            drawOctopus();
         }
 
-        void drawLines()
+        private void drawOctopus()
+        {
+            Canvas.SetLeft(OctopusIMG, myOctopus.X * 50);
+            Canvas.SetTop(OctopusIMG, myOctopus.Y * 50);
+        }
+
+        private void drawLines()
         {
               /* Horizontal Lines
               * X1   Y1   X2   Y2
