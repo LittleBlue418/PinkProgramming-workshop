@@ -11,7 +11,29 @@ namespace Octopus_Game
         public int X { get; private set; }
         public int Y { get; private set; }
         private int gridSize;
-        public int Hunger {get; set; }
+
+        private int hunger;
+        public int Hunger
+        {
+            get { return hunger; }
+
+            set
+            {
+                if (value < 0)
+                {
+                    hunger = 0;
+                }
+                else if (value > 100)
+                {
+                    hunger = 100;
+                }
+                else
+                {
+                    hunger = value;
+                }
+            }
+        }
+
 
         public Octopus(int x, int y, int gridSize) 
         { 
@@ -26,6 +48,7 @@ namespace Octopus_Game
             if (Y >= 1)
             {
                 Y--;
+                Hunger -= 5;
             }
         }
 
@@ -34,6 +57,7 @@ namespace Octopus_Game
             if (Y < (gridSize -1))
             {
                 Y++;
+                Hunger -= 5;
             }
         }
         public void moveLeft()
@@ -41,6 +65,7 @@ namespace Octopus_Game
             if (X >= 1)
             {
                 X--;
+                Hunger -= 5;
             }
         }
         public void moveRight()
@@ -48,6 +73,7 @@ namespace Octopus_Game
             if (X < (gridSize - 1))
             {
                 X++;
+                Hunger -= 5;
             }
         }
 

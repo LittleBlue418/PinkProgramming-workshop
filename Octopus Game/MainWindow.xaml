@@ -21,10 +21,15 @@
             </Canvas.Background>
             <Image x:Name="goldfishIMG" Source="goldfish.png" Width="35" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="0" Canvas.Top="-0.2" Margin="5,5,6,6"></Image>
             <Image x:Name="OctopusIMG" Source="octopus2.png" Width="50" Height="50"></Image>
-            
-
-
-
         </Canvas>
+
+        <Canvas Grid.Row="1" Height="100" Width='400'>
+            <!--<Line Stroke="Gray" StrokeThickness="5" Y1="50" X2="400" Y2="50"/> -->
+            <Line x:Name="hungerBar" Stroke="Red" StrokeThickness="5" Y1="50" X2="400" Y2="50"/>
+        </Canvas>
+        <Label x:Name="gameOverScreen" HorizontalAlignment="Center" VerticalAlignment="Center" 
+               Visibility="Hidden" Background="{x:Null}" Foreground="#FFFA0404" FontSize="30" 
+               FontWeight="Bold">You Starved to Death!</Label>
+        <Button x:Name="reset" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Margin="4,0,0,0" MinWidth="86" MinHeight="50">Try Again</Button>
     </Grid>
 </Window>

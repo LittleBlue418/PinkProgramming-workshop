@@ -84,6 +84,11 @@ namespace Octopus_Game
             Canvas.SetTop(goldfishIMG, myFood.Y * 50);
         }
 
+        private void drawHungerLine()
+        {
+            hungerBar.X2 = 4 * myOctopus.Hunger;
+        }
+
         private void drawLines()
         {
               /* Horizontal Lines
@@ -153,9 +158,17 @@ namespace Octopus_Game
             {
                 myFood.Respawn();
                 drawFood();
+                myOctopus.Hunger += 20;
             }
 
             drawOctopus();
+            drawHungerLine();
+
+            if (myOctopus.Hunger == 0)
+            {
+                canvas.Children.Clear();
+                gameOverScreen.Visibility = Visibility.Visible;
+            }
         }
     }
 }
